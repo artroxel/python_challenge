@@ -18,6 +18,9 @@ with open(csvpath, 'r') as csvfile:
 
     for row in csvreader:
          Total_Months = Total_Months + 1
+         Total_Rev = Total_Rev + int(row[1])
+
+         
 
 
 
