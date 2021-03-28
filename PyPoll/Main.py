@@ -44,3 +44,21 @@ print(f'{Candidates[3]}: {Percentage_Votes[3] :.3f}' + ' %' + '\n')
 print('-----------------------------\n')
 print('Winner: Khan \n')
 print('-----------------------------\n')
+
+output_path = os.path.join('Analysis','Election_Data.txt')
+with open(output_path, 'w', newline = '') as datafile:
+    datafile.write('Election Results \n')
+    datafile.write('-----------------------------\n')
+    datafile.write('Total Votes: ' + str(Total_Votes) + '\n')
+    datafile.write('-----------------------------\n')
+    datafile.write(f'{Candidates[0]}: {Percentage_Votes[0] :.3f}' + ' %' + '\n')
+    datafile.write(f'{Candidates[1]}: {Percentage_Votes[1] :.3f}' + ' %' + '\n')
+    datafile.write(f'{Candidates[2]}: {Percentage_Votes[2] :.3f}' + ' %' + '\n')
+    datafile.write(f'{Candidates[3]}: {Percentage_Votes[3] :.3f}' + ' %' + '\n')
+    datafile.write('-----------------------------\n')
+    datafile.write('Winner: Khan \n')
+    datafile.write('-----------------------------\n')
+
+with open(output_path, newline = '') as f:
+    for text in f:
+        print(text, end = '')
