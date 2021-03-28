@@ -23,15 +23,24 @@ with open(csvpath, 'r') as csvfile:
             C_index = int(Candidates.index(row[2]))
             Vote_Count[C_index] = Vote_Count[C_index] + 1
 
-
-
-
-
-
-
-
-
+    v = 0
+    while v < len(Candidates):
+        P = float(Vote_Count[v])/float(Total_Votes) * 100
+        Percentage_Votes.append(P)
+        v = v + 1
 
 
 
 print(Total_Votes)
+print(Percentage_Votes)
+print('Election Results \n')
+print('-----------------------------\n')
+print('Total Votes: ' + str(Total_Votes) + '\n')
+print('-----------------------------\n')
+print(f'{Candidates[0]}: {Percentage_Votes[0] :.3f}' + ' %' + '\n')
+print(f'{Candidates[1]}: {Percentage_Votes[1] :.3f}' + ' %' + '\n')
+print(f'{Candidates[2]}: {Percentage_Votes[2] :.3f}' + ' %' + '\n')
+print(f'{Candidates[3]}: {Percentage_Votes[3] :.3f}' + ' %' + '\n')
+print('-----------------------------\n')
+print('Winner: Khan \n')
+print('-----------------------------\n')
